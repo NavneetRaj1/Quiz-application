@@ -14,10 +14,10 @@ public class Login extends JFrame implements ActionListener {
         setLayout(null);
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Login.png"));
-        Image i = i1.getImage().getScaledInstance(1920,1080,Image.SCALE_DEFAULT);
+        Image i = i1.getImage().getScaledInstance(700,800,Image.SCALE_DEFAULT);
         ImageIcon i2 = new ImageIcon(i);
         JLabel image = new JLabel(i2);
-        image.setBounds(1000,0,1220,1080);
+        image.setBounds(500,0,700,800);
         add(image);
 
         JLabel heading = new JLabel("QUIZ TIME");
@@ -27,34 +27,34 @@ public class Login extends JFrame implements ActionListener {
         add(heading);
 
         JLabel name = new JLabel("Enter Your Name");
-        name.setBounds(160,150,300,20);
-        name.setFont(new Font("Mongolian Baiti", Font.BOLD,18));
+        name.setBounds(160,150,300,100);
+        name.setFont(new Font("Mongolian Baiti", Font.BOLD,20));
         name.setForeground(new Color(80,150,54));
         add(name);
 
         text = new JTextField();
-        text.setBounds(80,200,300,25);
+        text.setBounds(80,220,300,25);
         text.setFont(new Font("Times New Roman", Font.BOLD,18));
         name.setForeground(new Color(80,150,54));
         add(text);
 
         Next = new JButton("Next");
-        Next.setBounds(100,270,120,25);
+        Next.setBounds(80,300,125,30);
         Next.setBackground(new Color(22,99,54));
         Next.setForeground(Color.WHITE);
         Next.addActionListener(this);
         add(Next);
 
         Exit = new JButton("EXit");
-        Exit.setBounds(250,270,120,25);
+        Exit.setBounds(250,300,125,30);
         Exit.setBackground(new Color(22,99,54));
         Exit.setForeground(Color.WHITE);
         Exit.addActionListener(this);
         add(Exit);
 
-        setSize(1920,1080);
-//        setLocation(200,220);
-//        setUndecorated(true);
+        setSize(1200,800);
+        setLocation(600,0);
+        setUndecorated(true);
         setVisible(true);
 
     }
