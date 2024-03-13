@@ -44,7 +44,7 @@ public class Quiz extends JFrame implements ActionListener {
 
         question = new JLabel();
         question.setBounds(150, 450, 900, 30);
-        question.setFont(new Font("Thoma", Font.PLAIN, 24));
+        question.setFont(new Font("Thoma", Font.PLAIN, 28));
         add(question);
 
         questions[0][0] = "Number of primitive data types in Java are.?";
@@ -121,25 +121,25 @@ public class Quiz extends JFrame implements ActionListener {
         opt1 = new JRadioButton();
         opt1.setBounds(170, 520, 700, 30);
         opt1.setBackground(Color.WHITE);
-        opt1.setFont(new Font("Dialog", Font.PLAIN, 20));
+        opt1.setFont(new Font("Dialog", Font.PLAIN, 30));
         add(opt1);
 
         opt2 = new JRadioButton();
         opt2.setBounds(170, 560, 700, 30);
         opt2.setBackground(Color.WHITE);
-        opt2.setFont(new Font("Dialog", Font.PLAIN, 20));
+        opt2.setFont(new Font("Dialog", Font.PLAIN, 30));
         add(opt2);
 
         opt3 = new JRadioButton();
         opt3.setBounds(170, 600, 700, 30);
         opt3.setBackground(Color.WHITE);
-        opt3.setFont(new Font("Dialog", Font.PLAIN, 20));
+        opt3.setFont(new Font("Dialog", Font.PLAIN, 30));
         add(opt3);
 
         opt4 = new JRadioButton();
         opt4.setBounds(170, 640, 700, 30);
         opt4.setBackground(Color.WHITE);
-        opt4.setFont(new Font("Dialog", Font.PLAIN, 20));
+        opt4.setFont(new Font("Dialog", Font.PLAIN, 30));
         add(opt4);
 
         groupoptions = new ButtonGroup();
@@ -149,7 +149,7 @@ public class Quiz extends JFrame implements ActionListener {
         groupoptions.add(opt4);
 
         next = new JButton("Next");
-        next.setBounds(700, 750, 200, 30);
+        next.setBounds(1100, 525, 200, 40);
         next.setFont(new Font("Thoma", Font.PLAIN, 18));
         next.setBackground(new Color(22, 99, 54));
         next.setForeground(Color.WHITE);
@@ -157,7 +157,7 @@ public class Quiz extends JFrame implements ActionListener {
         add(next);
 
         lifeline = new JButton("Help");
-        lifeline.setBounds(930, 750, 200, 30);
+        lifeline.setBounds(1100, 585, 200, 40);
         lifeline.setFont(new Font("Thoma", Font.PLAIN, 18));
         lifeline.setBackground(new Color(22, 99, 54));
         lifeline.setForeground(Color.WHITE);
@@ -165,15 +165,16 @@ public class Quiz extends JFrame implements ActionListener {
         add(lifeline);
 
         submit = new JButton("Submit");
-        submit.setBounds(1150, 750, 200, 30);
+        submit.setBounds(1100, 645, 200, 40);
         submit.setForeground(Color.BLACK);
         submit.setFont(new Font("Thoma", Font.PLAIN, 18));
-        submit.setBackground(new Color(115, 105,100 ));
+        submit.setBackground(new Color(115, 15,100 ));
         submit.addActionListener(this);
         submit.setEnabled(false);
         add(submit);
 
         start(count);
+        setUndecorated(true);
 
         setVisible(true);
     }
