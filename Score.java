@@ -16,7 +16,7 @@ public class Score extends JFrame {
         image.setBounds(60,200,200,150);
         add(image);
 
-        JLabel heading = new JLabel("Thank you " + name + "for Playing QUIZ Test ");
+        JLabel heading = new JLabel("Thank you " + name + " for Playing QUIZ Test ");
         heading.setBounds(100,80,700,30);
         heading.setFont(new Font("Thoma", Font.BOLD,26));
         add(heading);
