@@ -14,26 +14,13 @@ public class Rules extends JFrame implements ActionListener {
 
         this.name = name;
 
-        JLabel heading = new JLabel("Welcome"+ name +"to QUIZ TEST");
+        JLabel heading = new JLabel("Welcome "+ name +" to QUIZ TEST");
         heading.setBounds(150,100,700,30);
-        heading.setFont( new Font("Viner Hand ITC", Font.BOLD, 28));
+        heading.setFont( new Font("Verdana", Font.BOLD, 28));
         heading.setForeground(new Color(22,99,54));
         add(heading);
 
-        JLabel rules = new JLabel();
-        rules.setBounds(70,150,700,350);
-        rules.setFont( new Font("Tahoma", Font.PLAIN, 16));
-        rules.setForeground(new Color(22,99,54));
-        rules.setText(
-                "<html>"+
-                        "1. Participation in the quiz is free and open to all persons above 18 years old." + "<br><br>" +
-                        "2. There are a total 10 questions. " + "<br><br>" +
-                        "3. You only have 15 seconds to answer the question." + "<br><br>" +
-                        "4. No cell phones or other secondary devices in the room or test area." + "<br><br>" +
-                        "5. No talking." + "<br><br>" +
-                        "6. No one else can be in the room with you." + "<br><br>" +
-                        "<html>"
-        );
+        JLabel rules = getjLabel();
         add(rules);
 
         back = new JButton("Back");
@@ -58,10 +45,28 @@ public class Rules extends JFrame implements ActionListener {
         add(image);
 
         setSize(800,650);
-        setLocation(350,100);
+        setLocation(900,200);
         setLayout(null);
         setUndecorated(true);
         setVisible(true);
+    }
+
+    private static JLabel getjLabel() {
+        JLabel rules = new JLabel();
+        rules.setBounds(70,150,700,350);
+        rules.setFont( new Font("Tahoma", Font.PLAIN, 20));
+        rules.setForeground(new Color(22,99,54));
+        rules.setText(
+                "<html>"+
+                        "1. Participation in the quiz is free and open to all persons above 18 years old." + "<br><br>" +
+                        "2. There are a total 10 questions. " + "<br><br>" +
+                        "3. You only have 15 seconds to answer the question." + "<br><br>" +
+                        "4. No cell phones or other secondary devices in the room or test area." + "<br><br>" +
+                        "5. No talking." + "<br><br>" +
+                        "6. No one else can be in the room with you." + "<br><br>" +
+                        "<html>"
+        );
+        return rules;
     }
 
     @Override
